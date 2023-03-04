@@ -62,7 +62,7 @@
 				const {data :res}= await uni.$http.get('https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata')
 				//console.log(res)
 				if(res.meta.status !== 200){
-					return uni.$showMsg
+					return uni.$showMsg()
 				}
 				this.swiperlist = res.message
 				uni.$showMsg('数据请求成功')
@@ -72,7 +72,7 @@
 				 const {data :res}= await uni.$http.get('https://api-hmugo-web.itheima.net/api/public/v1/home/catitems')
 				 //console.log(res)
 				 if(res.meta.status !== 200){
-				 	return uni.$showMsg
+				 	return uni.$showMsg()
 				 }
 				 this.navList = res.message
 				 uni.$showMsg('数据请求成功')
@@ -81,7 +81,7 @@
 			 				 const {data :res}= await uni.$http.get('https://api-hmugo-web.itheima.net/api/public/v1/home/floordata')
 			 				 //console.log(res)
 			 				 if(res.meta.status !== 200){
-			 				 	return uni.$showMsg
+			 				 	return uni.$showMsg()
 			 				 }
 							 //对数据进行处理
 							 res.message.forEach(floor=>{
