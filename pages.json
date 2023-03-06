@@ -40,6 +40,7 @@
                 {
                     // "navigationBarTitleText": "",
                     // "enablePullDownRefresh": false
+					
                 }
                 
                 }
@@ -47,8 +48,12 @@
                     "path" : "goods_list/goods_list",
                     "style" :                                                                                    
                 {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
+                    "navigationBarTitleText": "QWQ",
+					// 下拉刷新
+                    "enablePullDownRefresh": true,
+					"onReachBottomDistance": 150,
+					"backgroundColor": "#F8F8F8"
+					
                 }
                 
                 }
