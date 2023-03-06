@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<my-search @click='gotoSearch'></my-search>
 		<view class="scoll-view-container">
 			<!-- 左 -->
 			<scroll-view scroll-y="true" :style="{height: wh + 'px'}" class="left-scroll-view">
@@ -43,7 +44,7 @@
 		onLoad(){
 			
 			const apple = uni.getSystemInfoSync()
-			this.wh = apple.windowHeight
+			this.wh = apple.windowHeight - 50
 			this.getCateList()
 		},
 		methods:{
@@ -70,6 +71,11 @@
 			gotoGoodList(item){
 				uni.navigateTo({
 					url:'/subpkg/goods_list/goods_list?cid=' + item.cat_id
+				})
+			},
+			gotoSearch(){
+				uni.navigateTo({
+					url: '/subpkg/search/search'
 				})
 			}
 		}
