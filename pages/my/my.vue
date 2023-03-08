@@ -1,6 +1,8 @@
 <template>
 	<view>
+		<my-login v-if="true"></my-login>
 		
+		<my-sess v-if="false"></my-sess>
 	</view>
 </template>
 
